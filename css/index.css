@@ -1,0 +1,171 @@
+    /* Reset e boas práticas */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo da página */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fefefe);
+      color: #1c1c1c;
+      padding-top: 140px; /* Espaço para o topo fixo */
+      margin: auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Container central para o conteúdo */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Barra superior fixa */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #ccc;
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Área da logo */
+    .logo-area {
+      display: flex;
+      align-items: center;
+      height: 100px;
+    }
+
+    .logo-area img {
+      height: 190px;
+    }
+
+    /* Menu de navegação */
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .menu a {
+      position: relative;
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 6px 10px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    /* Linha animada ao passar o mouse no menu */
+    .menu a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #0d47a1;
+      transition: width 0.3s ease;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    /* Título principal */
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #1976d2, #26c6da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Bloco de conteúdo com efeito de cartão */
+    .content-box {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      margin-bottom: 24px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .content-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .content-box p:first-child {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #0d47a1;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 8px;
+      list-style-type: disc;
+      color: #333;
+    }
+
+    /* Links dentro das caixas de conteúdo */
+    .content-box a {
+      position: relative;
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .content-box a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #26c6da;
+      transition: width 0.3s ease;
+    }
+
+    .content-box a:hover {
+      color: #26c6da;
+      transform: translateY(-2px);
+    }
+
+    .content-box a:hover::after {
+      width: 100%;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+   
